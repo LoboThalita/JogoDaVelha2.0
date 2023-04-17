@@ -9,7 +9,6 @@ namespace JogoDaVelha2._0.Classes
 {
     public class Tabuleiro
     {
-        public int[,] matriz = new int[3, 3];
         public char[,] peca = new char[3, 3];
         public Tabuleiro()
         {
@@ -17,9 +16,7 @@ namespace JogoDaVelha2._0.Classes
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    if (this.matriz[i, j] == 1) peca[i, j] = 'X';
-                    else if (this.matriz[i, j] == 2) peca[i, j] = 'O';
-                    else peca[i, j] = ' ';
+                    peca[i, j] = ' ';
                 }
             }
         }

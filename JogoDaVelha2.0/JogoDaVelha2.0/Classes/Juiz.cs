@@ -34,8 +34,6 @@ namespace JogoDaVelha2._0.Classes
             vencedor = null;
         }
 
-       
-
         public void Iniciar()
         {
             Console.WriteLine("BEM-VINDO AO JOGO DA VELHA!!\n");
@@ -48,6 +46,19 @@ namespace JogoDaVelha2._0.Classes
             Console.Read();
         }
 
+        public void Verifica()
+        {
+            //chama os metodos privados de acordo com a lógica
 
+        }
+
+        private void Jogador1Venceu()
+        {
+            this.fimDoJogo = true;
+        }
+        private void Jogador2Venceu()
+        {
+            this.fimDoJogo = true;
+        }
     }
 }

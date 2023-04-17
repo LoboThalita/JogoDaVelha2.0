@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thalita.paz\\Documents\\Programação Orientada a Objetos\\Exercicios\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0.csproj": {}
+    "C:\\Users\\thalita.paz\\Documents\\GitHub\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thalita.paz\\Documents\\Programação Orientada a Objetos\\Exercicios\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0.csproj": {
+    "C:\\Users\\thalita.paz\\Documents\\GitHub\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thalita.paz\\Documents\\Programação Orientada a Objetos\\Exercicios\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0.csproj",
+        "projectUniqueName": "C:\\Users\\thalita.paz\\Documents\\GitHub\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0.csproj",
         "projectName": "JogoDaVelha2.0",
-        "projectPath": "C:\\Users\\thalita.paz\\Documents\\Programação Orientada a Objetos\\Exercicios\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0.csproj",
+        "projectPath": "C:\\Users\\thalita.paz\\Documents\\GitHub\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0.csproj",
         "packagesPath": "C:\\Users\\thalita.paz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thalita.paz\\Documents\\Programação Orientada a Objetos\\Exercicios\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0\\obj\\",
+        "outputPath": "C:\\Users\\thalita.paz\\Documents\\GitHub\\JogoDaVelha2.0\\JogoDaVelha2.0\\JogoDaVelha2.0\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\thalita.paz\\AppData\\Roaming\\NuGet\\NuGet.Config",
