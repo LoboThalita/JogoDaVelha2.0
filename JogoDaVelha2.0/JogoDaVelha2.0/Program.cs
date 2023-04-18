@@ -10,17 +10,17 @@ juiz.Iniciar();
 while (!juiz.fimDoJogo)
 {
     tabuleiro.Exibir();
-
     
     if (juiz.VezJogador1)
     {
-        Console.WriteLine($"{juiz.nomeJog1}, sua vez.");
+        Console.WriteLine($"{jogador1.nome}, sua vez.");
         jogador1.Jogar();
     }
     else
     {
-        Console.WriteLine($"{juiz.nomeJog2}, sua vez.");
+        Console.WriteLine($"{jogador2.nome}, sua vez.");
         jogador2.Jogar();
     }
-    
+
+    juiz.Verifica();
 }

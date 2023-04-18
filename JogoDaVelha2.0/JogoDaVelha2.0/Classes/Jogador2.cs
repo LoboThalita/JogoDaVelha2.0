@@ -11,6 +11,7 @@ namespace JogoDaVelha2._0.Classes
     {
         private Tabuleiro tabuleiro;
         public char peca { get; set; } = 'O';
+        public string nome { get; set; }
         public Jogador2(Tabuleiro tabuleiro)
         {
             this.tabuleiro = tabuleiro;

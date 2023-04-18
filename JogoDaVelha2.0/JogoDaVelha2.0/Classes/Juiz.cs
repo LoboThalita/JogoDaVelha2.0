@@ -13,9 +13,6 @@ namespace JogoDaVelha2._0.Classes
         private Jogador2 jogador2;
         private bool vezJogador1;
         public bool fimDoJogo { get; set; }
-        private int? vencedor;
-        public string nomeJog1 { get; set; }
-        public string nomeJog2 { get; set; }
         public bool VezJogador1
         {
             get
@@ -31,34 +28,103 @@ namespace JogoDaVelha2._0.Classes
             this.jogador2 = jogador2;
             vezJogador1 = false;
             fimDoJogo = false;
-            vencedor = null;
         }
 
         public void Iniciar()
         {
             Console.WriteLine("BEM-VINDO AO JOGO DA VELHA!!\n");
             Console.WriteLine("Informe o nome do Jogador 1 (X)");
-            this.nomeJog1 = Console.ReadLine();
+            jogador1.nome = Console.ReadLine();
             Console.WriteLine("Informe o nome do Jogador 2 (O)");
-            this.nomeJog2 = Console.ReadLine();
+            jogador2.nome = Console.ReadLine();
 
-            Console.WriteLine($"Bem-vindos {nomeJog1} e {nomeJog2}, aperte qualquer tecla para iniciar o jogo");
+            Console.WriteLine($"Bem-vindos {jogador1.nome} e {jogador2.nome}, aperte qualquer tecla para iniciar o jogo");
             Console.Read();
         }
 
         public void Verifica()
         {
-            //chama os metodos privados de acordo com a lógica
-
+            tabuleiro.Exibir();
+            for (int i = 0; i < 3; i++)
+            {
+                if (ChecaColuna(i))
+                {
+                    JogadorXVenceu(tabuleiro.peca[0,i]);
+                    break;
+                }else if (ChecaLinha(i))
+                {
+                    JogadorXVenceu(tabuleiro.peca[i,0]);
+                    break;
+                }else if (ChecaDiagonalPrincipal())
+                {
+                    JogadorXVenceu(tabuleiro.peca[i, i]);
+                    break;
+                }else if (ChecaDiagonalSecundária())
+                {
+                    JogadorXVenceu(tabuleiro.peca[2,0]);
+                    break;
+                }else if (ChecaEmpate())
+                {
+                    Empate();
+                    break;
+                }
+            }
+            
         }
-
-        private void Jogador1Venceu()
+        private void Finalizar(string? vencedor)
         {
+            if(vencedor != null)
+                Console.WriteLine($"{vencedor} Venceu!!! Parabéns!");
+            else
+                Console.WriteLine("Empate!");
+
+            Console.WriteLine("\nObrigado por jogar! Volte sempre");
+
             this.fimDoJogo = true;
         }
-        private void Jogador2Venceu()
+        private void JogadorXVenceu(char jogador)
         {
-            this.fimDoJogo = true;
+            if (jogador == 'X')
+            {
+                Finalizar(jogador1.nome);
+            }
+            else
+            {
+                Finalizar(jogador2.nome);
+            }
+        }
+        private void Empate()
+        {
+            Finalizar(null);
+        }
+        private bool ChecaLinha(int i)
+        {
+            return tabuleiro.peca[i, 0] == tabuleiro.peca[i, 1] && tabuleiro.peca[i, 1] == tabuleiro.peca[i, 2] && tabuleiro.peca[i, 0] != ' ';
+        }
+        private bool ChecaColuna(int i)
+        {
+            return tabuleiro.peca[0, i] == tabuleiro.peca[1, i] && tabuleiro.peca[1, i] == tabuleiro.peca[2, i] && tabuleiro.peca[0, i] != ' ';
+        }
+        private bool ChecaDiagonalPrincipal()
+        {
+            return tabuleiro.peca[0, 0] == tabuleiro.peca[1, 1] && tabuleiro.peca[1, 1] == tabuleiro.peca[2, 2] && tabuleiro.peca[0, 0] != ' ';
+        }
+        private bool ChecaDiagonalSecundária()
+        {
+            return tabuleiro.peca[2, 0] == tabuleiro.peca[1, 1] && tabuleiro.peca[1, 1] == tabuleiro.peca[0, 2] && tabuleiro.peca[2, 0] != ' ';
+        }
+        private bool ChecaEmpate()
+        {
+            int check = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if (tabuleiro.peca[i, j] != ' ') check++;
+                }
+            }
+            if (check == 9) return true;
+            else return false;
         }
     }
 }
