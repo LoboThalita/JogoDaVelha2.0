@@ -38,7 +38,7 @@ namespace JogoDaVelha2._0.Classes
             Console.WriteLine("Informe o nome do Jogador 2 (O)");
             jogador2.nome = Console.ReadLine();
 
-            Console.WriteLine($"Bem-vindos {jogador1.nome} e {jogador2.nome}, aperte qualquer tecla para iniciar o jogo");
+            Console.WriteLine($"\nBem-vindos {jogador1.nome} e {jogador2.nome}, aperte qualquer tecla para iniciar o jogo");
             Console.Read();
         }
 
