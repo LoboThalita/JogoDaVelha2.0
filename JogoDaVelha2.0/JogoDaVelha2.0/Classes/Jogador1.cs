@@ -19,13 +19,6 @@ namespace JogoDaVelha2._0.Classes
         }
         public void Jogar()
         {
-            //Correção de um bug q eu n sei o pq
-
-            //Console.WriteLine("Informe a linha:");
-            //int linha = Convert.ToInt32(Console.ReadLine());
-            //Console.WriteLine("Informe a coluna:");
-            //int coluna = Convert.ToInt32(Console.ReadLine())
-
             Console.WriteLine("Informe a linha:");
             int linha;
             while (!int.TryParse(Console.ReadLine(), out linha))
