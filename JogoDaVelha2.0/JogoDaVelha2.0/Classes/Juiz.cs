@@ -3,8 +3,8 @@
 public class Juiz
 {
     private readonly Tabuleiro tabuleiro;
-    private readonly Jogador1 jogador1;
-    private readonly Jogador2 jogador2;
+    private readonly Jogador jogador1;
+    private readonly Jogador jogador2;
     private bool vezJogador1;
     public bool FimDoJogo { get; set; }
 
@@ -19,7 +19,7 @@ public class Juiz
         }
     }
 
-    public Juiz(Tabuleiro tabuleiro, Jogador1 jogador1, Jogador2 jogador2)
+    public Juiz(Tabuleiro tabuleiro, Jogador jogador1, Jogador jogador2)
     {
         this.tabuleiro = tabuleiro;
         this.jogador1 = jogador1;

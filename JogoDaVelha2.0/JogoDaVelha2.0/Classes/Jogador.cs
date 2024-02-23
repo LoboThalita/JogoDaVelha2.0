@@ -1,14 +1,15 @@
 ﻿namespace JogoDaVelha2._0.Classes;
 
-public abstract class Jogador
+public class Jogador
 {
     private readonly Tabuleiro tabuleiro;
-    public char peca { get; set; } = ' ';
+    public readonly char peca;
     public string nome { get; set; }
 
-    public Jogador(Tabuleiro tabuleiro)
+    public Jogador(Tabuleiro tabuleiro, char peca)
     {
         this.tabuleiro = tabuleiro;
+        this.peca = peca;
     }
 
     public void Jogar()

@@ -2,8 +2,8 @@
 
 //Instancializando objetos para jogo
 Tabuleiro tabuleiro = new();
-Jogador1 jogador1 = new(tabuleiro);
-Jogador2 jogador2 = new(tabuleiro);
+Jogador jogador1 = new(tabuleiro, 'X');
+Jogador jogador2 = new(tabuleiro, 'O');
 Juiz juiz = new(tabuleiro, jogador1, jogador2);
 
 juiz.Iniciar();
